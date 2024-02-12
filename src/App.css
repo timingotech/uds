@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+.bgimage {
+  position: relative;
+  height: 90vh; /* Set the height to 100% of the viewport height */
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bgimage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(197, 147, 81, 0.795), rgba(197, 147, 81, 0.795)), url(images/BgImage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content {
+  position: relative;
+  z-index: 1; /* Ensure that content is above the dimming overlay and background image */
+  padding-bottom: 530px; /* If you need additional padding, adjust as necessary */
+}
+
+/* Media query for screen sizes less than 750px */
+@media (max-width: 750px) {
+  .mission{
+    margin-left: 55px;
+    margin-bottom: 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .vision{
+    margin-right: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .formhome{
+    padding: 0px 20px;
+  }  
+  .copyright{
+    display: none;
   }
+  .linkdesktop{
+    display: none;
+  }
+  .support{
+    margin-top: -145px;
+    margin-bottom: 30px;
+  }
+  .rahmat{
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+  .mosses{
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+  .mosses1{
+    margin-left: 50px;
+    margin-bottom: -80px;
+  }
+  .small{
+    display: none;
+  }
+  .service{
+    display: flex;
+    justify-content: center;
+  }
+  .button-menu{
+    margin-right: -100px;
+    margin-left: 300px;
+    margin-top: -25px;
+  }
+  .total{
+    margin-left: -220px;
+    padding-left: 50px;
+    
+  }
+  .home-smalll{
+    margin-top: 30px;
+  }
+  .home-small{
+    margin-left: 30px;
+  }
+  .down{
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+  .total li{
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  .menu-slide {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .menu-slide.block {
+    max-height: 500px; /* Set this value to a height that accommodates your menu items */
+  }
+  
+  
 }
