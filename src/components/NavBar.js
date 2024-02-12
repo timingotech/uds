@@ -5,10 +5,14 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import UnilagLogo from '../images/UnilagLogo.jfif';
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setShowMenu(!showMenu);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
   };
 
   return (
@@ -22,34 +26,35 @@ const NavBar = () => {
         
         <div className="md:hidden">
           <button onClick={toggleMenu} className='text-gray-600 focus:outline-none ml-[200px] text-2xl button-menu md:hidden'>
-            {isMenuOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
+            {showMenu  ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
           </button>
         </div>
-        <div className={`lg:flex ml-[260px] pt-1 font-normal total ${isMenuOpen ? 'block' : 'hidden'} menu-slide`}>
+        <div className={`lg:flex ml-[260px] pt-1 font-normal total ${showMenu  ? 'block' : 'hidden'} menu-slide`}>
           
           <ul className='flex flex-col lg:flex-row space-x-6 lg:space-x-0 lg:ml-0 text-lg font-bold'>
+            
             <li className='home-smalll'>
-              <Link to='/' className='home-small'>
+              <Link to='/' className='home-small' onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className=''>
-              <Link to='/reviews' className='md:ml-5 down'>
+              <Link to='/reviews' className='md:ml-5 down' onClick={closeMenu}>
                 Reviews
               </Link>
             </li>
             <li className=''>
-              <Link to='/services' className='md:ml-5 down'>
+              <Link to='/services' className='md:ml-5 down' onClick={closeMenu}>
                 Services
               </Link>
             </li>
             <li className=''>
-              <Link to='/about' className='md:ml-5 down'>
+              <Link to='/about' className='md:ml-5 down' onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className=''>
-              <Link to='/contact' className='md:ml-5 down'>
+              <Link to='/contact' className='md:ml-5 down' onClick={closeMenu}>
                 Contact
               </Link>
             </li>
@@ -57,7 +62,7 @@ const NavBar = () => {
           <ul className='flex space-x-4 md:ml-[260px] mt-[-7px]'>
             <li className='navlarge'>
               <button className='bg-[#fed393] font-bold  px-[15px] py-[6px] rounded shadow'>
-                <Link to="/enroll" >Enroll Now</Link>
+                <Link to="/enroll" onClick={closeMenu}>Enroll Now</Link>
               </button>
             </li>
           </ul>

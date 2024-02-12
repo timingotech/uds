@@ -49,22 +49,22 @@ const Footer = () => {
         <h1 className="font-bold text-md md:ml-[22.9px] ">Company</h1>  
                 <p className=''>
             <Link to='/' className=''>
-              Donate
+              Home
             </Link>
           </p>
           <p className=''>
-            <Link to='/feature' className=''>
-            Blog
+            <Link to='/reviews' className=''>
+            Reviews
             </Link>
           </p>
           <p className=''>
-            <Link to='/pricing' className=''>
-            Pricing
+            <Link to='/services' className=''>
+            Services
             </Link>
           </p>
           <p className=''>
-            <Link to='/Community' className=''>
-              Community
+            <Link to='/about' className=''>
+              About
             </Link>
           </p>
           <p className=''>
@@ -77,13 +77,13 @@ const Footer = () => {
       <div className="text-white space-x-6 ml-[120px] support">
         <h1 className="font-bold text-md ml-[22.9px] ">Support</h1>  
                 <p className=''>
-            <Link to='/' className=''>
+            <Link to='/contact' className=''>
               Help Center
             </Link>
           </p>
           <p className=''>
-            <Link to='/feature' className=''>
-            Terms of Service
+            <Link to='/enroll' className=''>
+            Enroll Now
             </Link>
           </p>
           <p className=''>

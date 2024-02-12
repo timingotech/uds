@@ -60,14 +60,14 @@ const Home = () => {
             </div>
             </div>
             
-        <div className="md:flex justify-center vision-mission bg-[#fed393] md:px-52 py-10 space-x-10"> 
+        <div className="md:flex justify-center vision-mission bg-[#fed393] md:px-52 py-10 md:space-x-10"> 
             <div className='bg-[#eed1a7] border border-black rounded-lg w-[310px] mission '>
                 <h1 className='my-4 text-2xl font-bold text-center'>Our Mission</h1>
                 <p className='px-[20px] mb-4'>
                     To provide a conducive innovation space, where staff, students and the general community can interact and join hands to solve problems and develop the world.
                 </p>
             </div>
-            <div className='bg-[#eed1a7] border border-black rounded-lg w-[310px] vision '>
+            <div className='bg-[#eed1a7] border border-black rounded-lg w-[310px] mission'>
                 <h1 className='my-4 text-2xl font-bold text-center'>Our Vision</h1>
                 <p className='px-[20px] mb-4'>
                     To become a globally competitive institution-based Technology Hub in pursuit of excellence in innovation and idea translation to solve societal problems                    
