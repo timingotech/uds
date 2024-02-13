@@ -26,7 +26,51 @@
   z-index: 1; /* Ensure that content is above the dimming overlay and background image */
   padding-bottom: 530px; /* If you need additional padding, adjust as necessary */
 }
-
+.marquee-container {
+  overflow: hidden;
+  }
+  
+  .marquee {
+  display: flex;
+  animation: marquee-animation 10s linear infinite;
+  }
+  
+  .marquee img {
+  flex-shrink: 0;
+  /* margin-right: 20px; */
+  }
+  
+  
+  /* .circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .top-right {
+    top: 20px;
+    right: 20px; /* Adjust this value as needed */
+    /* background-color: #20e019;
+    
+  }
+  
+  .bottom-left {
+    bottom: 20px;
+    left: -250px;
+    background-color: #20e019;
+  }  */
+  
+  
+  
+  @keyframes marquee-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+  }
 /* Media query for screen sizes less than 750px */
 @media (max-width: 750px) {
   .mission{
@@ -101,6 +145,8 @@
   .menu-slide.block {
     max-height: 500px; /* Set this value to a height that accommodates your menu items */
   }
-  
-  
+  .marquee {
+    display: flex;
+    animation: marquee-animation 4s linear infinite;
+    }
 }

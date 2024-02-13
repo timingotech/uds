@@ -1,8 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import Rice from '../images/Rice360.jpeg';
+import Nest from '../images/Nest360.png'
+import Ui from '../images/UIdesignstudio.jpeg'
 
 const Home = () => {
+
     //email sending 
     const form = useRef();
 
@@ -74,6 +78,28 @@ const Home = () => {
                 </p>
             </div>
         </div>
+        <div className="mb-8 texthome">
+    <h1 className='mt-8 mb-8 md:text-4xl text-3xl font-bold text-center'>Our Trusted <span className='text-[#fed393] '>Partnerships </span></h1>
+  </div>
+  <div className="marquee-container">
+    <div className="marquee">
+      <img src={Rice} alt="" className='md:w-[100px]  mr-8' />
+      <img src={Nest} alt="" className='w-48 mr-8' />
+      <img src={Ui} alt="" className='w-48 mr-8' />
+      <img src={Rice} alt="" className='md:w-48  mr-8' />
+      <img src={Nest} alt="" className='w-48 mr-8' />
+      <img src={Ui} alt="" className='w-48 mr-8' />
+      <img src={Rice} alt="" className='md:w-48  mr-8' />
+      <img src={Nest} alt="" className='w-48 mr-8' />
+      <img src={Ui} alt="" className='w-48 mr-8' />
+      <img src={Rice} alt="" className='md:w-48  mr-8' />
+      <img src={Nest} alt="" className='w-48 mr-8' />
+      <img src={Ui} alt="" className='w-48 mr-8' /><img src={Rice} alt="" className='md:w-48  mr-4' />
+      <img src={Nest} alt="" className='w-48 mr-8' />
+      <img src={Ui} alt="" className='w-48 mr-8' />
+
+    </div>
+  </div>
         <div className='bg-[#efefef]'>
               <h1 className='font-bold text-4xl ml[-200px] text-center pt-6'>
               <span className=''>Connect </span>

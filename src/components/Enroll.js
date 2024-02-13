@@ -38,10 +38,15 @@ const Enroll = () => {
               <input type="email" id="email" name="user_email" placeholder="Your email" className="w-full px-3 py-2 border rounded-md bg-[#eaeaec]" />
             </div>
             <div>
-              <label htmlFor="whyus" className="block mb-1 text-lg font-medium">Reason</label>
-              <input type="text" id="whyus" name="whyus" placeholder="Why do you want to join us?" className="w-full px-3 py-2 border rounded-md bg-[#eaeaec]" />
+              <label htmlFor="whyus" className="block mb-1 text-lg font-medium">Enroll for?:</label>
             </div>
             <div>
+              <select name="" id="" className='w-full px-3 py-2 border rounded-md bg-[#eaeaec]'>
+                <option value="">Internship</option>
+                <option value="">NYSC Program</option>
+                <option value="">Hackhathon</option>
+                <option value="">Job</option>
+              </select>
               <label htmlFor="message" className="block mb-1 text-lg font-medium">Why you?</label>
               <textarea id="message" name="message" placeholder="Tell us about you and why we should select you?" className="w-full px-3 py-2 border rounded-md bg-[#eaeaec]"></textarea>
             </div>
