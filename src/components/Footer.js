@@ -12,8 +12,8 @@ const Footer = () => {
   const newsLetter = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_bt2q0z7', 'template_odtudw6', form.current, 'Yz16g8qPG_-f9ArRT')
-      .then((result) => {
+    emailjs.sendForm('service_qriz1ox', 'template_dw99i57', form.current, 'tF72W2sKqDNgJhYEn')
+    .then((result) => {
         console.log(result.text);
         window.alert('Successfully!');
         window.location.reload();

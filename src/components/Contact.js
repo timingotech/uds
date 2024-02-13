@@ -10,8 +10,8 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_bt2q0z7', 'template_kwl0ojh', form.current, 'Yz16g8qPG_-f9ArRT')
-      .then((result) => {
+    emailjs.sendForm('service_qriz1ox', 'template_xe0m2br', form.current, 'tF72W2sKqDNgJhYEn')
+    .then((result) => {
           console.log(result.text);
           window.alert('Email sent successfully!');
           window.location.reload();
