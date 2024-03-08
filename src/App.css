@@ -4,18 +4,19 @@
 }
 .bgimage {
   position: relative;
-  height: 90vh; /* Set the height to 100% of the viewport height */
+  height: 100vh; 
   overflow: hidden;
+  
 }
 
-.bgimage::before {
+ .bgimage::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(197, 147, 81, 0.795), rgba(197, 147, 81, 0.795)), url(images/BgImage.jpg);
+  background: linear-gradient(rgba(177, 104, 10, 0.795), rgba(182, 111, 18, 0.795)), url(images/BgImage.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,12 +30,87 @@
 .marquee-container {
   overflow: hidden;
   }
-  
+  .nav-link {
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .nav-link:hover {
+    background: linear-gradient(to right, #8a5403, #e9d62b); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .enroll-link {
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .enroll-link:hover {
+    color: linear-gradient(to right, #8a5403, #e9d62b); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip:initial;
+    color: white;
+  }
+  .body-button {
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: white;
+    color: transparent;
+  }
+  .body-button:hover {
+    color: linear-gradient(to right, #8a5403, #e9d62b); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip:initial;
+    color: white;
+  }
+  .bodyy-button {
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: white;
+    color: white;
+  }
+  .bodyy-button:hover {
+    color: linear-gradient(to right, #8a5403, #e9d62b); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip:initial;
+    color: white;
+  }
+  .body-link {
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .backgroundcontact{
+    background: linear-gradient(to right, #8a5403, #e9d62b);
+  }
   .marquee {
   display: flex;
   animation: marquee-animation 10s linear infinite;
   }
+  .nav-link {
+    position: relative;
+    display: inline-block;
+  }
   
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #e9d62b, #8a5403); /* Adjust gradient colors as needed */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
   .marquee img {
   flex-shrink: 0;
   /* margin-right: 20px; */
@@ -60,6 +136,94 @@
     left: -250px;
     background-color: #20e019;
   }  */
+  .slide-up {
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .fade-in-right {
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out forwards;
+  }
+  
+  .fade-in-bottom {
+    opacity: 0;
+    animation: fadeInBottom 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fade-in-left {
+    opacity: 0;
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   
   

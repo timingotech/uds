@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import UnilagLogo from '../images/UnilagLogo.jfif';
 
+
+
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -31,37 +33,37 @@ const NavBar = () => {
         </div>
         <div className={`lg:flex ml-[260px] pt-1 font-normal total ${showMenu  ? 'block' : 'hidden'} menu-slide`}>
           
-          <ul className='flex flex-col lg:flex-row space-x-6 lg:space-x-0 lg:ml-0 text-lg font-bold'>
+          <ul className='flex flex-col space-x-6 text-lg font-bold lg:flex-row lg:space-x-0 lg:ml-0 '>
             
-            <li className='home-smalll'>
-              <Link to='/' className='home-small' onClick={closeMenu}>
+            <li className='home-smalll '>
+              <Link to='/' className='home-small nav-link' onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className=''>
-              <Link to='/reviews' className='md:ml-5 down' onClick={closeMenu}>
+              <Link to='/reviews' className='md:ml-5 down nav-link ' onClick={closeMenu}>
                 Reviews
               </Link>
             </li>
             <li className=''>
-              <Link to='/services' className='md:ml-5 down' onClick={closeMenu}>
+              <Link to='/services' className='md:ml-5 down nav-link' onClick={closeMenu}>
                 Services
               </Link>
             </li>
             <li className=''>
-              <Link to='/about' className='md:ml-5 down' onClick={closeMenu}>
+              <Link to='/about' className='md:ml-5 down nav-link' onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className=''>
-              <Link to='/contact' className='md:ml-5 down' onClick={closeMenu}>
+              <Link to='/contact' className='md:ml-5 down nav-link' onClick={closeMenu}>
                 Contact
               </Link>
             </li>
           </ul>
           <ul className='flex space-x-4 md:ml-[260px] mt-[-7px]'>
-            <li className='navlarge'>
-              <button className='bg-[#fed393] font-bold  px-[15px] py-[6px] rounded shadow'>
+            <li className='navlarge '>
+              <button className='bg-[#fed393] font-bold  px-[15px] py-[6px] rounded shadow enroll-link '>
                 <Link to="/enroll" onClick={closeMenu}>Enroll Now</Link>
               </button>
             </li>
