@@ -4,7 +4,17 @@ import emailjs from 'emailjs-com';
 import Rice from '../images/Rice360.jpeg';
 import Nest from '../images/Nest360.png'
 import Ui from '../images/UIdesignstudio.jpeg'
-
+import Ayodeji from '../images/Ayodeji.jpg'
+import Emma from '../images/Emma.jpg'
+import Eniola from '../images/Eniola.jpg'
+import Samuel from '../images/Samuel.jpg'
+import Mosees from '../images/Mosees.jpg'
+import Rahimat from '../images/Rahimat.jpg'
+import Group1 from '../images/Group15.png'
+import Group2 from '../images/Group17.png'
+import Group3 from '../images/Group18.png'
+import Group4 from '../images/Group19.png'
+import Group5 from '../images/Group20.png'
 const Home = () => {
 
     //email sending 
@@ -123,49 +133,147 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const [reviews] = useState([
+    // {
+    //   name: 'RAHAMAT MUFTAUDEEN',
+    //   position: 'INTERN 22\'23',
+    //   review: 'The internship taught me how to apply core engineering principles for the understanding and advancement of medical and healthcare technologies. I have also learnt to provide solution to some specific problems in medicine.',
+    //   image: Rahimat
+    // },
+    {
+      name: 'MOSES ONOWENON',
+      position: 'INTERN 21\'22',
+      review: 'The Rice 360 internship has opened my mind to a world of opportunities and has shown me ways to efficiently apply my knowledge in medical science in solving problems.',
+      image: Mosees
+    },
+    {
+      name: 'AYODEJI OYELAKIN',
+      position: 'INTERN 22\'23',
+      review: 'The rice internship was a really exciting one. the team based projects helped me learn how to work with other people. I\'m really grateful to have been part of the first cohort.',
+      image: Ayodeji
+    },
+    {
+      name: 'SAMUEL AKINREMI',
+      position: 'INTERN 22\'23',
+      review: 'This internship has exposed me to the endless opportunities that are available in the engineering field and how I can impact the health situation of Nigeria for good through innovation.',
+      image: Samuel
+    },
+    // {
+    //   name: 'EMMANUEL AWORESAN',
+    //   position: 'INTERN 22\'23',
+    //   review: 'Interning at UNILAG Design Studio has really motivated me to passionately grow the healthcare of Nigeria using cost effective locally made materials to achieving effective results. Cheers!',
+    //   image: Emma
+    // },
+    {
+      name: 'ENIOLA ALEX',
+      position: 'INTERN 22\'23',
+      review: 'The UNILAG design studio pulses with creativity and collaboration, echoing with the sounds of innovation. Within its vibrant walls, diverse ideas intertwine, fostering a dynamic environment. A testament to UNILAG\'s commitment, the studio stands as a hub shaping the future of design.',
+      image: Eniola
+    }
+  ]);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % reviews.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [reviews]);
+
   
   return (
     <div>
          <div className='bgimage'>
-                <div className={`mt-[110px] text-center content ${textVisible ? 'slide-up' : ''}`}>
-                    <h1 className='text-6xl font-bold'>UNILAG DESIGN <br /> STUDIO</h1>
-                    <p className='mt-12 text-2xl font-semibold'>A home of innovators</p>
-                    <button className='px-3 py-3 mt-12 font-bold border-2 border-black rounded-md body-button'>
+                <div className={`mt-[80px] ml-[100px] flex  content ${textVisible ? 'slide-up' : ''}`}>
+                  <div className="text-left">
+                  <h1 className='text-6xl font-bold '>UNILAG DESIGN <br /> STUDIO</h1>
+                    <p className='mt-12 text-2xl w-[500px]'><i> Pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration</i></p>
+                    <button className='px-3 py-3 mt-12 font-bold  text-white border-2 rounded-md bg-[#451010] '>
                         <Link to="/services">
                             Explore Innovative Designs
                         </Link>
                     </button>
+                  </div>
+                    <div className="ml-[390px] mt-[-80px] ">
+                      <img src={Group5} alt="" />
+                    </div>
                 </div>
             </div>
             <div className='flex justify-center'>
                 <div className={`py-10 about ${aboutVisible ? 'fade-in-right' : ''}`}>
-                    <h1 className='text-4xl font-bold text-center'>About Us</h1>
-                    <p className='md:px-[180px] px-[20px] mt-9 font-semibold'>UNILAG Design Studio emerged through a dynamic collaboration between the University of Lagos and RICE360 Global Institute, based in Houston, Texas, USA. This institute is renowned for pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration. The partnership brings forth a unique space – the UNILAG Design Studio – where academic excellence intersects with a commitment to fostering innovation and empowering the next generation of creative minds.</p>
+                    <h1 className='text-4xl font-bold text-left '>We offer the best services</h1>
                     <div className='text-center mt-11'>
-                        <Link to="/services" className={`inline-block body-button px-3 py-3 border-2 border-black rounded-md font-bold ${aboutVisible ? 'fade-in-bottom' : ''}`}>
-                            Discover Our Journey
+                      <div className="flex justify-center space-x-6">
+                        <div className="">
+                        <img src={Group1} alt=""  className='w-[300px]'/>
+                        <h1 className='w-[260px] font-bold mt-[-100px] mb-16'>Artificial Intelligence & Machine Learning</h1>
+                        </div>
+                        <div className="">
+                        <img src={Group2} alt=""  className='w-[300px]'/>
+                        <h1 className='w-[260px] font-bold mt-[-100px] mb-16'>Mechanical Fabrication</h1>
+                        </div>
+                        <div className="">
+                        <img src={Group3} alt=""  className='w-[300px]'/>
+                        <h1 className='w-[260px] font-bold mt-[-100px] mb-16'>Electronic Design</h1>
+                        </div>
+                      </div>
+                        <Link to="/services" className={`inline-block px-3 py-3 border-2 border-black rounded-md font-bold mb-[-20px] mt-3 ${aboutVisible ? 'fade-in-bottom' : ''}`}>
+                            See More...
                         </Link>
                     </div>
                 </div>
             </div>
-            <div className="justify-center py-10 md:flex vision-mission backgroundcontact md:px-52 md:space-x-10">
-                <div id="mission" className={`bg-[#eed1a7] border border-black rounded-lg w-[310px] mission ${missionVisible ? 'fade-in-right' : ''}`}>
-                    <h1 className='my-4 text-2xl font-bold text-center body-link'>Our Mission</h1>
-                    <p className='px-[20px] mb-4'>
-                        To provide a conducive innovation space, where staff, students and the general community can interact and join hands to solve problems and develop the world.
-                    </p>
-                </div>
-                <div id="vision" className={`bg-[#eed1a7] border border-black rounded-lg w-[310px] mission ${visionVisible ? 'fade-in-left' : ''}`}>
-                    <h1 className='my-4 text-2xl font-bold text-center body-link '>Our Vision</h1>
-                    <p className='px-[20px] mb-4'>
-                        To become a globally competitive institution-based Technology Hub in pursuit of excellence in innovation and idea translation to solve societal problems
-                    </p>
-                </div>
+            <div className="text-center mx-[40px] shadow-2xl rounded-lg">
+              <h1 className='my-4 text-4xl font-bold'>Our Partners</h1>
+            <div className="flex justify-center space-x-7">
+              <img className='w-[300px] h-[100px]' src={Rice} alt="" />
+              <img className='w-[300px] h-[100px]' src={Nest} alt="" />
+              <img className='w-[200px] h-[200px]' src={Ui} alt="" />
             </div>
-            <div ref={partnershipsRef} className="mt-8 mb-8 text-3xl font-bold text-center fade-in md:text-4xl">
+            </div>
+            <div className="flex justify-center text-center space-x-[150px] pb-[100px] pt-[100px] bg-[#FCF4F4]">
+              <div className='mt-[-50px]'>
+                <img src={Group4} alt="" />
+              </div>
+              <div className="mt-[40px]">
+                <h1 className='mb-6 text-5xl font-bold text-left'>About Us</h1>
+                <p className='w-[350px] text-left text-lg'>
+                UNILAG DESIGN STUDIO emerged through a dynamic collaboration between the university of Lagos and RICE360 Global Institute, based in Houston, Texas, USA. This institute is renowned for pioneering innovative research and education programs that actively involve students in creativity and exploration.
+                </p>
+              </div>
+            </div>
+            <div className="py-1 bg-gray-200">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="lg:text-center">
+          <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+            Reviews & Testimonials
+          </p>
+        </div>
+        <div className="max-w-lg mx-auto mt-2 ">
+          <div className="overflow-hidden rounded-lg shadow-lg">
+            <div className="relative h-[270px]  flex justify-center">
+              <img className="absolute object-cover h-[250px] rounded-full w-[250px]" src={reviews[currentIndex].image} alt={reviews[currentIndex].name} />
+            </div>
+            <div className="relative p-8 bg-white">
+              <div className="text-lg">
+                <p className="text-gray-900">{reviews[currentIndex].review}</p>
+              </div>
+              <div className="mt-6">
+                <p className="text-base font-medium text-gray-900">{reviews[currentIndex].name}</p>
+                <p className="text-base font-medium text-gray-500">{reviews[currentIndex].position}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <div ref={partnershipsRef} className="hidden mt-8 mb-8 text-3xl font-bold text-center fade-in md:text-4xl">
                 Our Trusted <span className="body-link ">Partnerships</span>
             </div>
-  <div className="marquee-container">
+  <div className="hidden marquee-container">
     <div className="marquee">
       <img src={Rice} alt="" className='md:w-[100px]  mr-8' />
       <img src={Nest} alt="" className='w-48 mr-8' />
@@ -184,9 +292,9 @@ const Home = () => {
 
     </div>
   </div>
-        <div className='backgroundcontact'>
+        <div className='bg-[#FCF4F4]'>
               <h1 className='font-bold text-4xl ml[-200px] text-center pt-6'>
-              <span className='body-link '>Connect </span>
+              <span className='text-gray-500 '>Connect </span>
                With Us</h1>
 
       <div className="flex flex-col gap-8 md:px-[70px]  py-20 md:flex-row " >
@@ -206,7 +314,7 @@ const Home = () => {
           <label htmlFor="message" className="block text-gray-700">Message</label>
           <textarea id="message" name="message" required className="w-full px-3 py-2 border-none rounded-md" rows="4"></textarea>
         </div>
-        <button type="submit" value="Send" className="px-8 py-2 mt-4 font-bold text-white border-2 border-black rounded bodyy-button">Submit</button>
+        <button type="submit" value="Send" className="px-8 py-2 mt-4 font-bold text-white bg-gray-500 border-2 rounded">Submit</button>
       </form> 
 
       {/* Join Newsletter Form */}
@@ -216,7 +324,7 @@ const Home = () => {
           <label htmlFor="newsletterEmail" className="block text-gray-700">Email</label>
           <input type="email" id="newsletterEmail" name="user_email" className="w-full px-3 py-2 border-none rounded-md" />
         </div>
-        <button type="submit" value="Send" className="px-8 py-2 mt-4 font-bold text-white border-2 border-black rounded bodyy-button">Subscribe</button>
+        <button type="submit" value="Send" className="px-8 py-2 mt-4 font-bold text-white bg-gray-500 border-2 rounded">Subscribe</button>
       </form>
     </div>
     </div>

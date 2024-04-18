@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className='md:pl-[100px] pl-[15px] pr-[100px] pt-[20px] pb-[20px] flex mb-[-17px]'>
+      <nav className='md:pl-[100px] pl-[15px] pr-[100px] pt-[20px] pb-[20px] flex mb-[-17px] bg-[#D8BABA]'>
         <div className="mt-[-20px]">
           <Link to='/' className=''>
             <img src={UnilagLogo} alt="" className='w-[70px]' />
@@ -31,39 +31,39 @@ const NavBar = () => {
             {showMenu  ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
           </button>
         </div>
-        <div className={`lg:flex ml-[260px] pt-1 font-normal total ${showMenu  ? 'block' : 'hidden'} menu-slide`}>
+        <div className={`lg:flex ml-[260px] pt-1 font-normal total ${showMenu  ? 'block' : 'hidden'} menu-slide `}>
           
           <ul className='flex flex-col space-x-6 text-lg font-bold lg:flex-row lg:space-x-0 lg:ml-0 '>
             
             <li className='home-smalll '>
-              <Link to='/' className='home-small nav-link' onClick={closeMenu}>
+              <Link to='/' className='text-black home-small' onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className=''>
-              <Link to='/reviews' className='md:ml-5 down nav-link ' onClick={closeMenu}>
+              <Link to='/reviews' className='text-black md:ml-5 down ' onClick={closeMenu}>
                 Reviews
               </Link>
             </li>
             <li className=''>
-              <Link to='/services' className='md:ml-5 down nav-link' onClick={closeMenu}>
+              <Link to='/services' className='text-black md:ml-5 down' onClick={closeMenu}>
                 Services
               </Link>
             </li>
             <li className=''>
-              <Link to='/about' className='md:ml-5 down nav-link' onClick={closeMenu}>
+              <Link to='/about' className='text-black md:ml-5 down' onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className=''>
-              <Link to='/contact' className='md:ml-5 down nav-link' onClick={closeMenu}>
+              <Link to='/contact' className='text-black md:ml-5 down' onClick={closeMenu}>
                 Contact
               </Link>
             </li>
           </ul>
           <ul className='flex space-x-4 md:ml-[260px] mt-[-7px]'>
             <li className='navlarge '>
-              <button className='bg-[#fed393] font-bold  px-[15px] py-[6px] rounded shadow enroll-link '>
+              <button className='bg-[#D9D9D9] font-bold  px-[15px] py-[6px] rounded shadow'>
                 <Link to="/enroll" onClick={closeMenu}>Enroll Now</Link>
               </button>
             </li>
