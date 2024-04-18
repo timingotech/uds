@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Enroll from './components/Enroll';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/services' element={<Services/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/enroll' element={<Enroll/>}></Route>
+        <Route path='/gallery' element={<Gallery/>}></Route>
       </Routes>
       <Footer/>
     </div>

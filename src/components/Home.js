@@ -192,7 +192,7 @@ const Home = () => {
                   <h1 className='text-6xl font-bold '>UNILAG DESIGN <br /> STUDIO</h1>
                     <p className='mt-12 text-2xl w-[500px]'><i> Pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration</i></p>
                     <button className='px-3 py-3 mt-12 font-bold  text-white border-2 rounded-md bg-[#451010] '>
-                        <Link to="/services">
+                        <Link to="/gallery">
                             Explore Innovative Designs
                         </Link>
                     </button>
