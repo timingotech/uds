@@ -20,9 +20,9 @@ const NavBar = () => {
   return (
     <div>
       <nav className='md:pl-[100px] pl-[15px] pr-[100px] pt-[20px] pb-[20px] flex mb-[-17px] bg-[#D8BABA]'>
-        <div className="mt-[-20px]">
+        <div className="mt-[0px]">
           <Link to='/' className=''>
-            <img src={UnilagLogo} alt="" className='w-[70px]' />
+            <img src={UnilagLogo} alt="" className='w-[80px]' />
           </Link>
         </div>
         
