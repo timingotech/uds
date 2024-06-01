@@ -127,18 +127,18 @@ void leftMotor(int motorSpeed) {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center mt-3">Autonomous Robot Vehicle</h1>
+      <h1 className="text-3xl font-bold text-center mt-5">Autonomous Robot Vehicle</h1>
       <div className='flex justify-center mt-11 mb-10'>
         <p className="text-left w-[450px] h-auto">
           This code controls an Arduino-based robot using two DC motors and an IR sensor for obstacle detection. The robot moves forward by default, stops, pauses, and turns right when an obstacle is detected, then resumes moving forward. The code initializes motor control pins, and the loop function continuously checks the IR sensor to decide the robot's actions. See the code snippet below for detailed implementation.
         </p>
         <div>
-          <img src={AutonomousRobot} alt="" className='w-[250px] h-[250px]' />
+          <img src={AutonomousRobot} alt="" className='w-[250px] h-[250px]'/>
         </div>
       </div>
       
       <div className='flex justify-center mb-4'>
-        <button 
+        <button
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
           onClick={copyToClipboardAutonomousRobot}
         >
@@ -147,7 +147,7 @@ void leftMotor(int motorSpeed) {
       </div>
 
       <div className='flex justify-center'>
-        <div className="p-4 bg-gray-900 text-white rounded-lg shadow-lg px-auto w-[700px]">
+        <div className="p-4 bg-gray-900 text-white rounded-lg shadow-lg px-auto md:w-[700px]">
           <pre className="whitespace-pre-wrap">
             <code className="language-cpp">{autonomousrobotcode}</code>
           </pre>

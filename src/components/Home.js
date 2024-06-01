@@ -187,10 +187,10 @@ const Home = () => {
   return (
     <div>
          <div className='bgimage'>
-                <div className={`mt-[80px] ml-[100px] flex  content ${textVisible ? 'slide-up' : ''}`}>
+                <div className={`mt-[80px] md:ml-[100px] ml-7 md:flex  content ${textVisible ? 'slide-up' : ''}`}>
                   <div className="text-left">
-                  <h1 className='text-6xl font-bold '>UNILAG DESIGN <br /> STUDIO</h1>
-                    <p className='mt-12 text-2xl w-[500px]'><i> Pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration</i></p>
+                  <h1 className='md:text-6xl text-4xl font-bold '>UNILAG DESIGN <br /> STUDIO</h1>
+                    <p className='mt-12 text-2xl md:w-[500px]'><i> Pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration</i></p>
                     <button className='px-3 py-3 mt-12 font-bold  text-white border-2 rounded-md bg-[#451010] '>
                         <Link to="/gallery">
                             Explore Innovative Designs
@@ -204,9 +204,9 @@ const Home = () => {
             </div>
             <div className='flex justify-center'>
                 <div className={`py-10 about ${aboutVisible ? 'fade-in-right' : ''}`}>
-                    <h1 className='text-4xl font-bold text-left '>We offer the best services</h1>
+                    <h1 className='md:text-4xl text-2xl font-bold text-left '>We offer the best services</h1>
                     <div className='text-center mt-11'>
-                      <div className="flex justify-center space-x-6">
+                      <div className="md:flex justify-center space-x-6 mx-auto">
                         <div className="">
                         <img src={Group1} alt=""  className='w-[300px]'/>
                         <h1 className='w-[260px] font-bold mt-[-100px] mb-16'>Artificial Intelligence & Machine Learning</h1>
@@ -226,22 +226,22 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-center mx-[40px] shadow-2xl rounded-lg">
+            <div className="text-center mx-[40px] shadow-2xl rounded-lg mb-5">
               <h1 className='my-4 text-4xl font-bold'>Our Partners</h1>
-            <div className="flex justify-center space-x-7">
+            <div className=" flex justify-center space-x-7 partners">
               <img className='w-[300px] h-[100px]' src={Rice} alt="" />
               <img className='w-[300px] h-[100px]' src={Nest} alt="" />
               <img className='w-[200px] h-[200px]' src={Ui} alt="" />
             </div>
             </div>
             <div className="flex justify-center text-center space-x-[150px] pb-[100px] pt-[100px] bg-[#FCF4F4]">
-              <div className='mt-[-50px]'>
+              <div className='mt-[-50px] pageimage'>
                 <img src={Group4} alt="" />
               </div>
-              <div className="mt-[40px]">
-                <h1 className='mb-6 text-5xl font-bold text-left'>About Us</h1>
+              <div className="md:mt-[40px] mt-[-80px]">
+                <h1 className='mb-6 md:text-5xl text-3xl font-bold text-left'>About Us</h1>
                 <p className='w-[350px] text-left text-lg'>
-                UNILAG DESIGN STUDIO emerged through a dynamic collaboration between the university of Lagos and RICE360 Global Institute, based in Houston, Texas, USA. This institute is renowned for pioneering innovative research and education programs that actively involve students in creativity and exploration.
+                UNILAG Design Studio emerged through a dynamic collaboration between the university of Lagos and RICE360 Global Institute, based in Houston, Texas, USA. This institute is renowned for pioneering innovative research and education programs that actively involve students in creativity and exploration.
                 </p>
               </div>
             </div>

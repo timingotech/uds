@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube, faInstagram, faFacebook, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faInstagram, faFacebook, faXTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import UnilagLogo from '../images/UnilagLogo.jfif'
 
 const Footer = () => {
@@ -31,17 +31,17 @@ const Footer = () => {
         </div>
         <p className='mb-5 md:w-[370px]'> Pioneering innovative research and education programs that actively involve students in the realm of creativity and exploration. </p>
         <p className='mb-5 copyright'>Copyright &copy; 2023 Timingotech. <br />All rights reserved.</p>
-        <Link to="https://www.youtube.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
+        <Link to="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
           <FontAwesomeIcon icon={faYoutube} />
         </Link>
-        <a href="https://www.instagram.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
+        <a href="https://www.instagram.com/unilag_designstudio" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="https://www.x.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
+        <a href="https://www.x.com/Unilag_Design" target="_blank" rel="noopener noreferrer" className='mr-6 linkdesktop'>
           <FontAwesomeIcon icon={faXTwitter} />
         </a>
-        <a href="https://www.facebook.com/timingotech" target="_blank" rel="noopener noreferrer" className='linkdesktop'>
-          <FontAwesomeIcon icon={faFacebook} />
+        <a href="https://www.linkedin.com/company/unilag-design-studio" target="_blank" rel="noopener noreferrer" className='linkdesktop'>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
       <div className='md:flex footersecond '>
@@ -115,17 +115,17 @@ const Footer = () => {
       </form>
     </div>
     <div className="text-white mt-7">
-        <Link to="https://www.youtube.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden '>
+        <Link to="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden '>
           <FontAwesomeIcon icon={faYoutube} />
         </Link>
-        <a href="https://www.instagram.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden'>
+        <a href="https://www.instagram.com/unilag_designstudio" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden'>
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="https://www.x.com/timingotech" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden'>
+        <a href="https://x.com/Unilag_Design" target="_blank" rel="noopener noreferrer" className='mr-6 text-2xl md:hidden'>
           <FontAwesomeIcon icon={faXTwitter} />
         </a>
-        <a href="https://www.facebook.com/timingotech" target="_blank" rel="noopener noreferrer" className='text-2xl md:hidden'>
-          <FontAwesomeIcon icon={faFacebook} />
+        <a href="https://www.linkedin.com/company/unilag-design-studio" target="_blank" rel="noopener noreferrer" className='text-2xl md:hidden'>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
                        <p className='mt-5 mb-5 text-center md:hidden'>Copyright &copy; 2024 Babcock Intern 24'. <br />All rights reserved.</p>
 
