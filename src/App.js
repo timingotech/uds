@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Enroll from './components/Enroll';
 import Gallery from './components/Gallery';
+import LadiesinTech from './components/LadiesinTech';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/enroll' element={<Enroll/>}></Route>
         <Route path='/gallery' element={<Gallery/>}></Route>
+        <Route path='/code' element={<LadiesinTech/>}></Route>
       </Routes>
       <Footer/>
     </div>

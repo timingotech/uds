@@ -60,6 +60,11 @@ const NavBar = () => {
                 Contact
               </Link>
             </li>
+            <li className=''>
+              <Link to='/code' className='text-black md:ml-5 down' onClick={closeMenu}>
+                LiT
+              </Link>
+            </li>
           </ul>
           <ul className='flex space-x-4 md:ml-[260px] mt-[-7px]'>
             <li className='navlarge '>

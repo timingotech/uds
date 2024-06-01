@@ -220,7 +220,7 @@ const Home = () => {
                         <h1 className='w-[260px] font-bold mt-[-100px] mb-16'>Electronic Design</h1>
                         </div>
                       </div>
-                        <Link to="/services" className={`inline-block px-3 py-3 border-2 border-black rounded-md font-bold mb-[-20px] mt-3 ${aboutVisible ? 'fade-in-bottom' : ''}`}>
+                        <Link to="/code" className={`inline-block px-3 py-3 border-2 border-black rounded-md font-bold mb-[-20px] mt-3 ${aboutVisible ? 'fade-in-bottom' : ''}`}>
                             See More...
                         </Link>
                     </div>
