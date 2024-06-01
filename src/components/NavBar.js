@@ -61,7 +61,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className=''>
-              <Link to='/code' className='text-black md:ml-5 down' onClick={closeMenu}>
+              <Link to='/lit' className='text-black md:ml-5 down' onClick={closeMenu}>
                 LiT
               </Link>
             </li>
