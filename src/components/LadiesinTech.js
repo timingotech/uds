@@ -246,7 +246,7 @@ void stopMotion() {
   };
 
   const copyToClipboardBluetoothCar = () => {
-    navigator.clipboard.writeText(autonomousrobotcode).then(() => {
+    navigator.clipboard.writeText(bluetoothcar).then(() => {
       setButtonText('Copied!');
       setTimeout(() => {
         setButtonText('Copy Code');
@@ -288,8 +288,7 @@ void stopMotion() {
       <h1 className="text-3xl font-bold text-center mt-5">Bluetooth Controlled Vehicle</h1>
       <div className='flex justify-center mt-11 mb-10'>
         <p className="text-left w-[450px] h-auto">
-        This code controls an Arduino-based robot using two DC motors and an IR sensor for obstacle detection. The robot moves forward by default, stops, pauses, and turns right when an obstacle is detected, then resumes moving forward. The code initializes motor control pins, and the loop function continuously checks the IR sensor to decide the robot's actions. See the code snippet below for detailed implementation.
-        </p>
+        This Arduino code controls a robot with an L298N motor driver and a Bluetooth module for wireless commands. The motor control pins (`ENA`, `IN1`, `IN2`, `IN3`, `IN4`) and Bluetooth pins (`bluetoothTx`, `bluetoothRx`) are configured in the `setup` function, where the Bluetooth module and serial monitor are also initialized. In the `loop`, the code waits for Bluetooth commands ('F' for forward, 'B' for backward, 'L' for left, 'R' for right, 'S' for stop) and executes them using the `executeCommand` function. The `moveForward`, `moveBackward`, `moveLeft`, `moveRight`, and `stopMotion` functions manage the motor directions and speeds for the corresponding movements.         </p>
         <div>
           <img src={BluetoothCar} alt="" className='w-[250px] h-[250px]'/>
         </div>
