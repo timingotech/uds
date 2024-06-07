@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
 import AutonomousRobot from '../images/AutonomousRobot.jpeg';
+import BluetoothCar from '../images/BluetoothCar.jpg';
 
 const LadiesinTech = () => {
   const [buttonText, setButtonText] = useState('Copy Code');
@@ -112,6 +113,125 @@ const LadiesinTech = () => {
   }  
   `;
 
+  const bluetoothcar = `
+  #include <SoftwareSerial.h>
+
+// Define pins for L298N motor driver
+const int ENA = 5; // PWM Speed Control Pin for Motor A
+const int IN1 = 12; // Motor A direction control
+const int IN2 = 11; // Motor A direction control
+const int IN3 = 10; // Motor B direction control
+const int IN4 = 9; // Motor B direction control
+
+// Define Bluetooth module pins
+const int bluetoothTx = 2;
+const int bluetoothRx = 3;
+
+SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
+
+void setup() {
+  // Set motor control pins as outputs
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  
+  // Set the baud rate for the Bluetooth module
+  bluetooth.begin(9600);
+  
+  // Start the serial monitor for debugging
+  Serial.begin(9600);
+  Serial.println("Setup complete. Waiting for commands...");
+}
+
+void loop() {
+
+  while (bluetooth.available() == 0) {}
+    char command = bluetooth.read();
+    Serial.print("Command received: ");
+    Serial.println(command);
+    executeCommand(command);
+    
+  /*if (bluetooth.available() > 0) {
+    char command = bluetooth.read();
+    Serial.print("Command received: ");
+    Serial.println(command);
+    executeCommand(command);
+  }*/
+
+  // Small delay to stabilize the loop
+  //delay(50);
+}
+
+void executeCommand(char command) {
+  switch(command) {
+    case 'F': // Forward
+      Serial.println("Moving Forward");
+      moveForward();
+      break;
+    case 'B': // Backward
+      Serial.println("Moving Backward");
+      moveBackward();
+      break;
+    case 'L': // Left
+      Serial.println("Turning Left");
+      moveLeft();
+      break;
+    case 'R': // Right
+      Serial.println("Turning Right");
+      moveRight();
+      break;
+    case 'S': // Stop
+      Serial.println("Stopping");
+      stopMotion();
+      break;
+    default:
+      Serial.println("Unknown command");
+      break;
+  }
+}
+
+void moveForward() {
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  analogWrite(ENA, 255); // Full speed
+}
+
+void moveBackward() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(ENA, 255); // Full speed
+}
+
+void moveLeft() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  analogWrite(ENA, 150); // Full speed
+}
+
+void moveRight() {
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(ENA, 150); // Full speed
+}
+
+void stopMotion() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  analogWrite(ENA, 0); // Stop
+}
+  `;
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -125,8 +245,18 @@ const LadiesinTech = () => {
     });
   };
 
+  const copyToClipboardBluetoothCar = () => {
+    navigator.clipboard.writeText(autonomousrobotcode).then(() => {
+      setButtonText('Copied!');
+      setTimeout(() => {
+        setButtonText('Copy Code');
+      }, 2000); // Reset button text after 2 seconds
+    });
+  };
+
   return (
-    <div>
+    <div className='mb-5'>
+      <div>
       <h1 className="text-3xl font-bold text-center mt-5">Autonomous Robot Vehicle</h1>
       <div className='flex justify-center mt-11 mb-10'>
         <p className="text-left w-[450px] h-auto">
@@ -152,6 +282,35 @@ const LadiesinTech = () => {
             <code className="language-cpp">{autonomousrobotcode}</code>
           </pre>
         </div>
+      </div>
+      </div>
+      <div>
+      <h1 className="text-3xl font-bold text-center mt-5">Bluetooth Controlled Vehicle</h1>
+      <div className='flex justify-center mt-11 mb-10'>
+        <p className="text-left w-[450px] h-auto">
+        This code controls an Arduino-based robot using two DC motors and an IR sensor for obstacle detection. The robot moves forward by default, stops, pauses, and turns right when an obstacle is detected, then resumes moving forward. The code initializes motor control pins, and the loop function continuously checks the IR sensor to decide the robot's actions. See the code snippet below for detailed implementation.
+        </p>
+        <div>
+          <img src={BluetoothCar} alt="" className='w-[250px] h-[250px]'/>
+        </div>
+      </div>
+      
+      <div className='flex justify-center mb-4'>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          onClick={copyToClipboardBluetoothCar}
+        >
+          {buttonText}
+        </button>
+      </div>
+
+      <div className='flex justify-center'>
+        <div className="p-4 bg-gray-900 text-white rounded-lg shadow-lg px-auto md:w-[700px]">
+          <pre className="whitespace-pre-wrap">
+            <code className="language-cpp">{bluetoothcar}</code>
+          </pre>
+        </div>
+      </div>
       </div>
     </div>
   );
