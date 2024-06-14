@@ -20,18 +20,18 @@ const NavBar = () => {
   return (
     <div>
       <nav className='md:pl-[100px] pl-[15px] pr-[100px] pt-[20px] pb-[20px] flex mb-[-17px] bg-[#D8BABA]'>
-        <div className="mt-[20px]">
+        <div className="mt-[-20px]">
           <Link to='/' className=''>
             <img src={UnilagLogo} alt="" className='w-[80px]' />
           </Link>
         </div>
         
-        <div className="md:hidden">
+        <div className="md:hidden mr-7">
           <button onClick={toggleMenu} className='text-gray-600 focus:outline-none ml-[200px] text-2xl button-menu md:hidden'>
             {showMenu  ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
           </button>
         </div>
-        <div className={`lg:flex ml-[260px] pt-1 font-normal total ${showMenu  ? 'block' : 'hidden'} menu-slide `}>
+        <div className={`lg:flex ml-[260px] pt-1 font-normal mr-7 total ${showMenu  ? 'block' : 'hidden'} menu-slide `}>
           
           <ul className='flex flex-col space-x-6 text-lg font-bold lg:flex-row lg:space-x-0 lg:ml-0 '>
             
@@ -46,7 +46,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className=''>
-              <Link to='/services' className='text-black md:ml-5 down' onClick={closeMenu}>
+              <Link to='/blog' className='text-black md:ml-5 down' onClick={closeMenu}>
                 Services
               </Link>
             </li>

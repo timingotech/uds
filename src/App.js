@@ -10,6 +10,9 @@ import Contact from './components/Contact';
 import Enroll from './components/Enroll';
 import Gallery from './components/Gallery';
 import LadiesinTech from './components/LadiesinTech';
+import BlogData from './components/BlogData';
+import BlogPost from './components/BlogPost';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route path='/enroll' element={<Enroll/>}></Route>
         <Route path='/gallery' element={<Gallery/>}></Route>
         <Route path='/lit' element={<LadiesinTech/>}></Route>
+        <Route path="/blog" element={<Blog blogs={BlogData} />} />
+        <Route path="/blog/:id" element={<BlogPost blogData={BlogData} />} />
       </Routes>
       <Footer/>
     </div>
