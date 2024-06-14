@@ -46,7 +46,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className=''>
-              <Link to='/blog' className='text-black md:ml-5 down' onClick={closeMenu}>
+              <Link to='/services' className='text-black md:ml-5 down' onClick={closeMenu}>
                 Services
               </Link>
             </li>
@@ -61,8 +61,8 @@ const NavBar = () => {
               </Link>
             </li>
             <li className=''>
-              <Link to='/lit' className='text-black md:ml-5 down' onClick={closeMenu}>
-                LiT
+              <Link to='/blog' className='text-black md:ml-5 down' onClick={closeMenu}>
+                Blogs
               </Link>
             </li>
           </ul>

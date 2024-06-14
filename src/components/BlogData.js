@@ -35,7 +35,7 @@ const BlogData = [
     image5: Dutch4,
     image6: Dutch5,
     readingTime: "5 min",
-    category: "Netherland, Delegates, Vice President",
+    category: "Netherland, Delegates, Vice President, Dutch",
     socialMedia: {
         twitter: "https://twitter.com/timingotech",
         instagram: "https://instagram.com/timingotech",
